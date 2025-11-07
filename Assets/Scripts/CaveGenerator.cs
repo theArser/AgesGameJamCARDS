@@ -36,8 +36,6 @@ public class CaveGenerator : MonoBehaviour
                             currentRotations.RemoveAt(b);
                             branches--;
 
-                            Debug.Log("Branch Collided and Removed");
-
                             branchIsColliding = true;
                             break;
                         }
