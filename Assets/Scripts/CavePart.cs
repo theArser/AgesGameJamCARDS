@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[system.Serializable]
+[System.Serializable]
 public class CavePart
 {
     public GameObject cavePrefab;
