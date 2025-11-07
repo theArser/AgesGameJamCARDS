@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1229dd26b17078f4da612e22d6061f2b, type: 3}
-  m_Name: CaveGenerator
+  m_Script: {fileID: 11500000, guid: 9efee6244dbb58941843749137132d81, type: 3}
+  m_Name: GameManager
   m_EditorClassIdentifier: 

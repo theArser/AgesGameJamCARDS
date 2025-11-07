@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "CaveGenerator", menuName = "Scriptable Objects/CaveGenerator")]
-public class CaveGenerator : ScriptableObject
+public class CaveGenerator : MonoBehaviour
 {
-    [SerializeField] List<CavePart> caveParts;
+    [SerializeField] List<CavePart> cavePartPalette;
 }

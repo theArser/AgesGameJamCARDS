@@ -1,5 +1,13 @@
 using UnityEngine;
 
+public enum Direction
+{
+    North,
+    East,
+    South,
+    West
+}
+
 [System.Serializable]
 public class CavePart
 {
@@ -7,4 +15,5 @@ public class CavePart
     public Vector3 position;
     public Vector3 entryOffset;
     public Vector3 exitOffset;
+    public Direction caveDirection;
 }
