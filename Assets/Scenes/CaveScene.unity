@@ -231,10 +231,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 191
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -385,10 +385,6 @@ PrefabInstance:
     - target: {fileID: 7946583193205460120, guid: 25da9bc219e53fb41904647f0e9675e1, type: 3}
       propertyPath: m_Name
       value: Black Fog
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946583193205460120, guid: 25da9bc219e53fb41904647f0e9675e1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
