@@ -77,7 +77,6 @@ public class CaveGenerator : MonoBehaviour
                 else
                 {
                     CavePart selectedPart = cavePartPalette[cavePartIndex];
-                    
                     currentPositions[b] -= currentRotations[b] * selectedPart.entryOffset;
                     GameObject caveInstance = Instantiate(
                         selectedPart.cavePrefab,

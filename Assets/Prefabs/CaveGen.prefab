@@ -45,26 +45,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialCaveParts: 20
-  branchChance: 0.2
+  branchChance: 0
   redBallPrefab: {fileID: 3380649596232791548, guid: cb20be7d4bd9fe540bc25f4032a35b26, type: 3}
   cavePartPalette:
-  - cavePrefab: {fileID: 5761980020256519941, guid: 5cc0ce19a8429de4ebc80147af2cb2e2, type: 3}
+  - cavePrefab: {fileID: 2382745528004730524, guid: 3830d1151de5056449c012e7bf1fef56, type: 3}
     position: {x: 0, y: 0, z: 0}
-    entryOffset: {x: 0, y: -2, z: -4}
-    exitOffset: {x: 0, y: 2, z: 4}
+    entryOffset: {x: 0, y: -4, z: -8}
+    exitOffset: {x: 0, y: 4, z: 8}
     caveDirection: 0
-  - cavePrefab: {fileID: 13789959267663493, guid: b413af073aab87e4daec49e80961654a, type: 3}
+  - cavePrefab: {fileID: 3868143571656047574, guid: 2da8cbb7f01c7034da8712fb95cbe1cf, type: 3}
     position: {x: 0, y: 0, z: 0}
-    entryOffset: {x: 0, y: -2, z: -4}
-    exitOffset: {x: 4, y: 2, z: 0}
+    entryOffset: {x: 0, y: -4, z: -8}
+    exitOffset: {x: 8, y: 4, z: 0}
     caveDirection: 1
-  - cavePrefab: {fileID: 1743460130080600088, guid: 68b1818dad5450b4cbcea869c69e55ac, type: 3}
+  - cavePrefab: {fileID: 8747495835906304965, guid: c47327bb4a0410145a1ca6f6141566b3, type: 3}
     position: {x: 0, y: 0, z: 0}
-    entryOffset: {x: 0, y: -2, z: -4}
-    exitOffset: {x: 0, y: 2, z: -4}
+    entryOffset: {x: 0, y: -4, z: -8}
+    exitOffset: {x: 0, y: 4, z: -8}
     caveDirection: 2
-  - cavePrefab: {fileID: 3216594631595894081, guid: 627d398eee75a714080172066977b3f2, type: 3}
+  - cavePrefab: {fileID: 8847307941411139247, guid: 994a9038e39dd8a4f8e8dbbc01e1cce2, type: 3}
     position: {x: 0, y: 0, z: 0}
-    entryOffset: {x: 0, y: -2, z: -4}
-    exitOffset: {x: -4, y: 2, z: 0}
+    entryOffset: {x: 0, y: -4, z: -8}
+    exitOffset: {x: -8, y: 4, z: 0}
     caveDirection: 3
