@@ -5,6 +5,12 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Transform playerCamera;
+    private Vector2 cameraRotation;
+    private Vector3 movementInput;
+    [SerializeField][Range(0.1f, 1f)] private float cameraSensitivity = 0.5f;
+    private const float cameraSensitivityMultiplier = 0.1f;
+    [SerializeField][Range(0.1f, 1f)] private float movementSpeed = 1f;
+    private const float movementSpeedMultiplier = 20f;
     private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,29 +22,33 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        float speed = movementSpeed * movementSpeedMultiplier;
+        rb.AddForce(
+            transform.right * movementInput.x * speed +
+            playerCamera.forward * movementInput.z * speed +
+            Vector3.up * movementInput.y * speed
+        );
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        Vector3 input = context.ReadValue<Vector3>();
-
-        rb.AddForce(
-            (transform.right * input.x * 10f +
-            playerCamera.forward * input.z * 10f +
-            Vector3.up * input.y * 10f).normalized * 10f
-        );
+        movementInput = context.ReadValue<Vector3>();
     }
 
     public void Look(InputAction.CallbackContext context)
     {
         Vector2 input = context.ReadValue<Vector2>();
-        transform.Rotate(Vector3.up, input.x * 0.1f);
-        playerCamera.Rotate(Vector3.right, -input.y * 0.1f);
 
-        
+        cameraRotation.x += input.x * cameraSensitivity * cameraSensitivityMultiplier;
+        if (cameraRotation.x > 360f) cameraRotation.x -= 360f;
+        if (cameraRotation.x < 0f) cameraRotation.x += 360f;
+        cameraRotation.y -= input.y * cameraSensitivity * cameraSensitivityMultiplier;
+        cameraRotation.y = Mathf.Clamp(cameraRotation.y, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(0f, cameraRotation.x, 0f);
+        playerCamera.localRotation = Quaternion.Euler(cameraRotation.y, 0f, 0f);
     }
 
 }
