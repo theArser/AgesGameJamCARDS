@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class CollisionAction : MonoBehaviour
 {
-    public UnityAction onCollision;
+    public UnityEvent onCollision;
 
     private void OnTriggerEnter(Collider other)
     {

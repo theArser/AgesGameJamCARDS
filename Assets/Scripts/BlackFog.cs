@@ -8,7 +8,7 @@ public class BlackFog : MonoBehaviour
     private float tTotal = 0f;
     [SerializeField] private MonoCavePart currentCavePart;
 
-    private void Start()
+    private void OnEnable()
     {
         currentCavePart = caveGenerator.FirstCavePart;
     }
